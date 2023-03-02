@@ -24,7 +24,7 @@ double fourthFuncAns = Math.Max(x, y);
 Console.WriteLine($"First Func result:{firstFuncAns}\nSecond Func result:{secondFuncAns}\nThird Func result:{thirdFuncAns}\nFourth Func result:{fourthFuncAns}");
 Console.WriteLine();
 
-Console.WriteLine($"{365 - DateTime.Now.DayOfYear + 1} days left to New Year");
+Console.WriteLine($"{DateTime.MaxValue.DayOfYear - DateTime.Now.DayOfYear + 1} days left to New Year");
 Console.WriteLine($"{DateTime.Now.DayOfYear - 1} days passed from New Year");
 Console.Read();
 
