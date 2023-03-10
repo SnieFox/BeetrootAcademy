@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-partial class Program
+class Program
 {
     //Task 1 
     static int MaxOfParams(params int[] nums)
