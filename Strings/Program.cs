@@ -8,7 +8,10 @@ bool method1 = Compare(str1, str2);
 bool method11 = Compare(str1, str3);
 
 //Method 2
-int method2 = Analyze(str3);
+int alfCount;
+int dgtCount;
+int specCount;
+Analyze(str3, out alfCount, out dgtCount, out specCount);
 
 //Method 3
 string method3 = Sort(str1);
@@ -17,17 +20,27 @@ string method3 = Sort(str1);
 char[] chars = Duplicate(str4);
 
 static bool Compare(string str1, string str2) => str1==str2 ? true : false;
-static int Analyze(string str)
+static void Analyze(string str, out int alfCount, out int dgtCount, out int specCount)
 {
-    //int result1 = str.Length;
-    //return result1;
-    int result = 0;
+    alfCount = 0;
+    dgtCount = 0;
+    specCount = 0;
     char[] charArray = str.ToCharArray();
     foreach (var ch in charArray)
     {
-        result++;
+        if (char.IsLetter(ch))
+        {
+            alfCount++;
+        }
+        else if (char.IsDigit(ch))
+        {
+            dgtCount++;
+        }
+        else
+        {
+            specCount++;
+        }
     }
-    return result;
 }
 static string Sort(string str)
 {
